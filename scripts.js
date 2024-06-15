@@ -156,7 +156,7 @@ onload = function() {
     for (let i = 0; i < inptsArr.length; i++) {
       if (isNaN(strings(0,4)) || isNaN(strings(5,9)) || isNaN(strings(10,14)) || isNaN(strings(15,19))) {
           errorText[1].classList.add("inter-card__show-err");
-          errorText[1].innerHTML = `Incorrect format, ${errorArr[1]}`;
+          errorText[1].innerHTML = errorArr[4];
           stopTyping();
       } else if (!isNaN(strings(0,4)) || !isNaN(strings(5,9)) || !isNaN(strings(10,14)) || !isNaN(strings(15,19))) {
           errorText[1].classList.remove("inter-card__show-err");
