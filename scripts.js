@@ -11,7 +11,7 @@ onload = function() {
   const security = document.querySelector(".inter-card__security");
   const errorArea = [...errorText];
   const inptsArr = [...inpts];
-  const errorArr = [`Can't be blank`, `Numbers only`, `Please enter a valid name`, `Wrong format`, `Wrong format, numbers only`, `Enter valid year`, `Incorrect amount of numbers`, 'Invalid year', 'Invalid month';
+  const errorArr = [`Can't be blank`, `Numbers only`, `Please enter a valid name`, `Wrong format`, `Wrong format, numbers only`, `Enter valid year`, `Incorrect amount of numbers`, 'Invalid year', 'Invalid month'];
 
   //hide form and display success message after submit
   const displayConfirmation = (a, b) => {
