@@ -11,7 +11,7 @@ onload = function() {
   const security = document.querySelector(".inter-card__security");
   const errorArea = [...errorText];
   const inptsArr = [...inpts];
-  const errorArr = [`Can't be blank`, `Numbers only`, `Please enter a valid name`, `Wrong format`, `Wrong format, numbers only`, `Enter valid year`, `Incorrect amount of numbers`];
+  const errorArr = [`Can't be blank`, `Numbers only`, `Please enter a valid name`, `Wrong format`, `Wrong format, numbers only`, `Enter valid year`, `Incorrect amount of numbers`, 'Invalid year', 'Invalid month';
 
   //hide form and display success message after submit
   const displayConfirmation = (a, b) => {
@@ -99,7 +99,7 @@ onload = function() {
     }
     if (!regMonth.test(inpts[2].value) && inpts[2].value.length > 0) {
       errorText[2].classList.add("inter-card__show-err");
-      errorText[2].innerHTML = errorArr[3];
+      errorText[2].innerHTML = errorArr[8];
       inpts[2].classList.add("inter-card__red-border");
     } else if (regMonth.test(inpts[2].value)) {
       errorText[2].classList.remove("inter-card__show-err");
@@ -115,7 +115,7 @@ onload = function() {
     }
     if (`20${inpts[3].value}` < parsedYear && inpts[3].value > 0 || `20${inpts[3].value}` > (parsedYear + 6)) {
       errorText[3].classList.add("inter-card__show-err");
-      errorText[3].innerHTML = errorArr[3];
+      errorText[3].innerHTML = errorArr[7];
       inpts[3].classList.add("inter-card__red-border");
     } else if (regYear.test(inpts[3].value)) {
       errorText[3].classList.remove("inter-card__show-err");
