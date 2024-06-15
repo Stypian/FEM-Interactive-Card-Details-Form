@@ -1,0 +1,632 @@
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    body {
+        margin: 0;
+    }
+
+    * {
+        font-size: 10px;
+        font-family: 'Space Grotesk';
+    }
+
+    @font-face {
+        font-family: 'Space Grotesk';
+        font-style: normal;
+        font-weight: 300 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      .inter-card__main {
+        width: 100%;
+        height: 100vh;
+        background: #fff url("images/bg-main-desktop.png") repeat-y;
+        background-size: cover auto;
+        background-position: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .inter-card__cont {
+        min-width: 1008px;
+        height: 58rem;
+        display: flex;
+      }
+
+      .inter-card__image-half {
+        width: 54%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .inter-card__image-inner {
+        width: 100%;
+        height: 90%;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        margin-left: 1rem;
+      }
+
+      .inter-card__form-half {
+        width: 44%;
+        height: 100%;
+      }
+
+      .inter-card__front-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .inter-card__back-wrap {
+        position: absolute;
+        right: 0;
+        bottom: 0;                         
+      }
+
+      .inter-card__card {
+        max-width: 44.7rem;
+      }
+
+      .inter-card__card-top {
+        width: 100%;
+        display: flex;
+        position: absolute;
+        top: 12%;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      .inter-card__circle-large {
+        width: 4.6rem;
+        height: 4.6rem;
+        border-radius: 50%;
+        background-color: #fff;
+        margin-left: 3rem;
+      }
+
+      .inter-card__circle-small {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        border: solid #fff 1px;
+      }
+
+      .inter-card__credit-num {
+        display: flex;
+        gap: 1.8rem;
+        justify-content: center;
+        position: absolute;
+        top: 52%;
+        width: 100%;
+        color: #fff;
+      }
+
+      .inter-card__credit-grp {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+        font-weight: 500;
+      }
+
+      .inter-card__credit-info {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        position: absolute;
+        top: 78%;
+        color: #fff;
+      }
+
+      .inter-card__credit-name {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+        margin-left: 3.4rem;
+      }
+
+      .inter-card__credit-date {
+        font-size: 1.4rem;
+        letter-spacing: 1.4px;
+      }
+
+      .inter-card__card-year {
+        margin-right: 3.4rem;
+      }
+
+      .inter-card__security {
+        position: absolute;
+        letter-spacing: 1.2px;
+        right: 14%;
+        top: 46%;
+        transform: translateY(-100%);
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.4rem;
+      }
+
+      .inter-card__form-half {
+        width: 46%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .inter-card__confirmation {
+        width: 70%;
+        height: 70%;
+        display: none;
+        margin-left: 6rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 6rem;
+        background-color: #fff;
+        gap: 1.2rem;
+      }
+
+      .inter-card__confirm-h2 {
+        font-size: 2.4rem;
+        font-weight: 500;
+        letter-spacing: 1.4px;
+        margin-bottom: 0;
+      }
+
+      .inter-card__confirm-p {
+        font-size: 1.4rem;
+        color: hsl(279, 6%, 55%);
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: 500;
+      }
+
+      .inter-card__form {
+        width: 70%;
+        height: 70%;
+        display: flex;
+        margin-left: 6rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #fff;
+        gap: 1.2rem;
+      }
+
+      .inter-card__input-wrap {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        color: hsl(278, 68%, 11%);
+      }
+
+      .inter-card__input {
+        font-size: 1.8rem;
+        width: 100%;
+        padding-left: 1.5rem;
+        padding-block: 1rem;
+        border: solid hsl(270, 3%, 87%) 1px;
+        border-radius: .8rem;
+        box-sizing: border-box;
+      }
+
+      .inter-card__input:focus {
+        background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to right, rgb(100, 72, 254), rgb(96, 5, 148)) border-box;
+        border: 1px solid transparent;
+        border-radius: .8rem;
+        padding-left: 1.5rem;
+        outline: none;
+      }
+
+      .inter-card__input-label {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        font-weight: 500;
+        margin-bottom: .8rem;
+        white-space: nowrap;
+      }
+
+      .inter-card__input::placeholder {
+        color: hsla(279, 6%, 55%, 0.5);
+        font-weight: 500;
+      }
+
+      .inter-card__date-cvc-wrap {
+        display: flex;
+        width: 100%;
+        gap: 2rem;
+      }
+
+      .inter-card__input-cvc-wrap {
+        width: 50%;
+      }
+
+      .inter-card__month-year {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+      }
+
+      .inter-card__m-y-wrap {
+        width: 40%;
+        margin-bottom: -1.2rem;
+      }
+
+      .inter-card__date-wrap {
+        display: flex;
+        width: 100%;
+        gap: 1rem;
+      }
+
+      .inter-card__input--cvc {
+        width: 100%;
+      }
+
+      .inter-card__input--date {
+        width: 100%;
+      }
+
+      .inter-card__confirm {
+        width: 100%;
+        padding-block: 1.2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        border-radius: 8px;
+        color: #fff;
+        background-color: hsl(278, 68%, 11%);
+        margin-top: 2.5rem;
+        cursor: pointer;
+      }
+
+      .inter-card__confirm:active {
+        background-color:rgb(67, 1, 105);
+        box-shadow: 0px 2px 2px rgba(0,0,0,0.6);
+      }
+
+      .inter-card__red-border {
+        border-color: hsl(0, 100%, 66%);
+      }
+
+      .inter-card__blank {
+        margin-bottom: 0;
+        margin-top: .5rem;
+        font-weight: 500;
+        color: hsl(0, 100%, 66%);
+        white-space: nowrap;
+        display: none;
+      }
+
+      .inter-card__format {
+          margin-bottom: 0;
+          margin-top: .5rem;
+          font-weight: 500;
+          color: hsl(0, 100%, 66%);
+          white-space: nowrap;
+          display: none;
+      }
+
+      .inter-card__nums-only {
+        margin-bottom: 0;
+        margin-top: .5rem;
+        font-weight: 500;
+        color: hsl(0, 100%, 66%);
+        white-space: nowrap;
+        display: none;
+    }
+
+      .inter-card__letters {
+        margin-bottom: 0;
+        margin-top: .5rem;
+        font-weight: 500;
+        color: hsl(0, 100%, 66%);
+        white-space: nowrap;
+        display: none;
+      }
+
+      .inter-card__more {
+        margin-bottom: 0;
+        margin-top: .5rem;
+        font-weight: 500;
+        color: hsl(0, 100%, 66%);
+        white-space: nowrap;
+        display: none;
+      }
+
+      .inter-card__show-err {
+        display: block;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      @media screen and (max-width: 1008px) {
+        .inter-card__cont {
+          min-width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 831px) {
+        .inter-card__main {
+          background: #fff url("images/bg-main-mobile.png") repeat-x;
+          background-size: cover auto;
+          background-position: top;
+          height: auto;
+          padding-top: 24rem; 
+          padding-bottom: 30rem;
+        }
+        
+        .inter-card__confirmation {
+          padding-top: 0 !important;
+        } 
+
+        .inter-card__confirm-h2 {
+          font-size: 2.6rem;
+          letter-spacing: 3px;
+        }
+
+        .inter-card__confirm-p {
+          font-size: 1.8rem;
+          margin-bottom: 1rem;
+        }
+
+        .inter-card__confirm--mobile {
+          width: 84%;
+        }
+
+        .inter-card__cont {
+          flex-direction: column;
+          min-width: 100%;
+          align-items: center;
+          /*height: 70rem;*/
+          height: auto;
+        }
+
+        .inter-card__image-inner {
+          margin-top: -45rem;
+          max-width: 500px;
+          margin-inline: 0;
+        }
+
+        .inter-card__card {
+          width: 34.7rem;
+        }
+
+        .inter-card__back-wrap {
+          top: 0;
+          right: 5%;
+          bottom: auto;
+        }
+
+        .inter-card__front-wrap {
+          left: 5%;
+          /*top: 34%;*/
+          margin-top: 21%;
+          z-index: 100;
+        }
+
+        .inter-card__image-half {
+          width: 100%;
+          align-items: center;
+        }
+
+        .inter-card__credit-num {
+          gap: 1.6rem;
+        }
+
+        .inter-card__credit-grp {
+          font-size: 2rem;
+          letter-spacing: 4px;
+          font-weight: 500;
+        }
+
+        .inter-card__form-half {
+          width: 100%;
+          padding-top: 16rem;
+        }
+
+        .inter-card__form {
+          margin-left: 0;
+        }
+
+        .inter-card__confirmation {
+          margin-left: 0;
+          padding-top: 12rem;
+          width: 40rem;
+        }
+  
+      }
+
+      @media screen and (max-width: 500px) {
+        .inter-card__card {
+          width: 70vw;
+        }
+
+        .inter-card__front-wrap {
+          left: 7.5%;
+          margin-top: 21.5%;
+        }
+
+        .inter-card__back-wrap {
+          right: 7.5%;
+        }
+
+        .inter-card__credit-num {
+          gap: 1.4rem;
+        }
+
+        .inter-card__credit-grp {
+          font-size: 4vw;
+        }
+
+        .inter-card__form {
+          width: 90%;
+        }
+      }
+
+      @media screen and (max-width: 465px) {
+        .inter-card__input--date {
+          padding-left: .5rem;
+        }
+
+        .inter-card__form-half {
+          padding-top: 8rem;
+        }
+
+        .inter-card__main {
+          padding-bottom: 10rem;
+        }
+
+      }
+
+      @media screen and (max-width: 410px) {
+        .inter-card__card {
+          width: 76vw;
+        }
+
+        .inter-card__front-wrap {
+          margin-top: 28%;
+          left: 4%;
+        }
+
+        .inter-card__back-wrap {
+          margin-top: 5%;
+          right: 4%;
+        }
+
+        .inter-card__credit-num {
+          gap: 1.4rem;
+        }
+
+        .inter-card__credit-grp {
+          font-size: 4.2vw;
+          letter-spacing: 4px;
+          font-weight: 500;
+        }
+
+        .inter-card__circle-large {
+          transform: scale(.8);
+        }
+  
+        .inter-card__circle-small {
+          transform: scale(.8);
+        }
+
+        .inter-card__credit-info {
+          top: 74%;
+        }
+
+        .inter-card__security {
+          font-size: 1.2rem;
+        }
+
+        .inter-card__credit-name {
+          font-size: 1.2rem;
+        }
+  
+        .inter-card__credit-date {
+          font-size: 1.2rem;
+        }
+  
+      }
+
+      @media screen and (max-width: 350px) {
+        .inter-card__credit-num {
+          gap: 1.1rem;
+        }
+
+        .inter-card__credit-info {
+          top: 74%;
+        }
+
+        .inter-card__credit-name {
+          font-size: 1rem;
+          margin-left: 2rem;
+        }
+  
+        .inter-card__credit-date {
+          font-size: 1rem;
+        }
+
+        .inter-card__card-year {
+          margin-right: 2rem;
+        }
+      }
+
+  
+      @media screen and (max-width: 330px) {
+
+        .inter-card__security {
+          font-size: 1.1rem;
+        }
+
+        .inter-card__credit-num {
+          gap: .8rem;
+        }
+
+        .inter-card__credit-name {
+          font-size: 1rem;
+          margin-left: 1.5rem;
+        }
+
+        .inter-card__card-year {
+          margin-right: 1.5rem;
+        }
+
+        .inter-card__form {
+          width: 94%;
+        }
+
+      }
+
+
+      

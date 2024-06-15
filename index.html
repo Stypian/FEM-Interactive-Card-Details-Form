@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <script src="scripts.js"></script>
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+<body>
+  <main class="inter-card__main">
+    <section class="inter-card__cont">
+      <div class="inter-card__image-half">
+        <div class="inter-card__image-inner">
+          <div class="inter-card__front-wrap">
+            <div class="inter-card__card-top">
+              <span class="inter-card__circle-large"></span>
+              <span class="inter-card__circle-small"></span>
+            </div>
+            <p class="inter-card__credit-num"><span class="inter-card__credit-grp">0000</span><span class="inter-card__credit-grp">0000</span><span class="inter-card__credit-grp">0000</span><span class="inter-card__credit-grp">0000</span></p>
+            <div class="inter-card__credit-info">
+              <p class="inter-card__credit-name">Jane appleseed</p>
+              <p class="inter-card__credit-date"><span class="inter-card__credit-date inter-card__card-month">00</span>/<span class="inter-card__credit-date inter-card__card-year">00</span></p>
+            </div>
+            <img src="images/bg-card-front.png" class="inter-card__card inter-card__front">
+          </div>
+          <div class="inter-card__back-wrap">
+            <p class="inter-card__security">000</p>
+            <img src="images/bg-card-back.png" class="inter-card__card inter-card__back">
+          </div>
+        </div>
+      </div>
+      <div class="inter-card__form-half">
+        <div class="inter-card__confirmation">
+          <img src="images/icon-complete.svg" class="inter-card__completed-icon" alt="completed icon">
+          <h2 class="inter-card__confirm-h2">THANK YOU!</h2>
+          <p class="inter-card__confirm-p">We've added your card details</p>
+          <button class="inter-card__confirm inter-card__confirm--mobile">Continue</button>
+        </div>
+        <form class="inter-card__form">
+          <div class="inter-card__input-wrap">
+            <p class="inter-card__input-label">cardholder name</p>
+            <input type="text" class="inter-card__input" placeholder="e.g. Jane Appleseed">
+            <p class="inter-card__blank">Can't be blank</p>
+            <p class="inter-card__letters">Please enter a valid name</p>
+          </div>
+          <div class="inter-card__input-wrap">
+            <p class="inter-card__input-label">cardholder number</p>
+            <input type="text" class="inter-card__input inter-card__main-input" placeholder="e.g. 1234 5678 9123 0000">
+            <p class="inter-card__blank">Can't be blank</p>
+            <p class="inter-card__format">Wrong format, numbers only</p>
+            <p class="inter-card__more">Incorrect amount of numbers</p>
+          </div>
+          <div class="inter-card__input-wrap">
+            <div class="inter-card__date-cvc-wrap">
+              <div class="inter-card__month-year">
+                <p class="inter-card__input-label">exp. date (mm/yy)</p>
+                <div class="inter-card__date-wrap">
+                  <div class="inter-card__m-y-wrap">
+                    <input type="text" class="inter-card__input inter-card__input--date" placeholder="MM">
+                    <p class="inter-card__blank">Can't be blank</p>
+                    <p class="inter-card__nums-only">Numbers only</p>
+                    <p class="inter-card__format">Wrong format</p>
+                  </div>
+                  <div class="inter-card__m-y-wrap">
+                    <input type="text" class="inter-card__input inter-card__input--date" placeholder="YY">
+                    <p class="inter-card__blank">Can't be blank</p>
+                    <p class="inter-card__nums-only">Numbers only</p>
+                    <p class="inter-card__format">Enter valid year</p>
+                  </div>
+                </div>
+              </div>
+              <div class="inter-card__input-cvc-wrap">
+                <p class="inter-card__input-label">cvc</p>
+                <input type="text" class="inter-card__input inter-card__input--cvc" placeholder="e.g. 123">
+                <p class="inter-card__blank">Can't be blank</p>
+                <p class="inter-card__nums-only">Numbers only</p>
+                <p class="inter-card__more">Incorrect amount of numbers</p>
+              </div>
+            </div>
+          </div>
+          <button class="inter-card__confirm">Confirm</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
