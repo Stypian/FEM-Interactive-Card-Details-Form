@@ -59,6 +59,8 @@ onload = function() {
     const nameReg = /^[a-zA-Z '.-]{3,}$/;
     const regMonth = /^(0[1-9]|1[0-2])$/;
     const regYear = /^(2[0-9])$/;
+    const currentYear = new Date().getFullYear();
+    const parsedYear = parseInt(currentYear);
 
 
     for (let i = 0; i < inpts.length; i++) {
@@ -111,7 +113,7 @@ onload = function() {
       errorText[3].classList.remove("inter-card__show-err");
       inpts[3].classList.remove("inter-card__red-border");
     }
-    if (!regYear.test(inpts[3].value) && inpts[3].value.length > 0) {
+    if (`20${inpts[3].value}` < parsedYear && inpts[3].value > 0 || `20${inpts[3].value}` > (parsedYear + 6)) {
       errorText[3].classList.add("inter-card__show-err");
       errorText[3].innerHTML = errorArr[3];
       inpts[3].classList.add("inter-card__red-border");
