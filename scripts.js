@@ -19,18 +19,6 @@ onload = function() {
     b.style.display = 'flex';
   }
 
-  //display form info on card images
-  const toImage = () => {
-    cardInfo[0].innerHTML = inpts[1].value.substring(0, 4);
-    cardInfo[1].innerHTML = inpts[1].value.substring(5, 9);
-    cardInfo[2].innerHTML = inpts[1].value.substring(10, 14);
-    cardInfo[3].innerHTML = inpts[1].value.substring(15, 19);
-    name.innerHTML = inpts[0].value;
-    month.innerHTML = inpts[2].value;
-    year.innerHTML = inpts[3].value;
-    security.innerHTML = inpts[4].value;
-  }
-
   //show error messages
   function addError(n) {
     errorText[n].classList.add("inter-card__show-err");
@@ -178,10 +166,19 @@ onload = function() {
   }
 
   //input events
+  inpts[0].addEventListener("input", function() {
+    name.innerHTML = inpts[0].value;
+  })
+
   inpts[1].addEventListener("input", function() {
     if (inpts[1].value.length > 19) {
       inpts[1].value = inpts[1].value.substr(0, 19);
     }
+    cardInfo[0].innerHTML = inpts[1].value.substring(0, 4);
+    cardInfo[1].innerHTML = inpts[1].value.substring(5, 9);
+    cardInfo[2].innerHTML = inpts[1].value.substring(10, 14);
+    cardInfo[3].innerHTML = inpts[1].value.substring(15, 19);
+
     numbersOnly();
   })
 
@@ -189,25 +186,27 @@ onload = function() {
     if (inpts[2].value.length > 2) {
       inpts[2].value = inpts[2].value.substr(0, 2);
     }
+    month.innerHTML = inpts[2].value;
   })
 
   inpts[3].addEventListener("input", function() {
     if (inpts[3].value.length > 2) {
       inpts[3].value = inpts[3].value.substr(0, 2);
     }
+    year.innerHTML = inpts[3].value;
   })
 
   inpts[4].addEventListener("input", function() {
     if (inpts[4].value.length > 3) {
       inpts[4].value = inpts[4].value.substr(0, 3);
     }
+    security.innerHTML = inpts[4].value;
   })
 
   //submit form if no errors are present
   const submitForm = () => {
     if (errorArea.every(e => {return e.classList.contains("inter-card__show-err") === false}) && inptsArr.every(e => {return e.value.length > 1})) {
       stopRefresh();
-      toImage();
       displayConfirmation(form, success);
     }
   }
